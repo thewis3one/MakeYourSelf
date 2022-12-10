@@ -1,0 +1,21 @@
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+
+.wrapper {
+    height: 100%;
+    padding: 0 10% 0 10%;
+}
+
+.content {
+    background-color: black;
+    background: rgba(0, 0, 0, .85);
+    border-radius: 10px;
+    text-align: center;
+}
+
+form {
+    color:white;
+}
+

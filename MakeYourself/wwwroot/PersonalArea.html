@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="styles/PersonalAreaStyle.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <form id="upload-container" method="POST" action="send.php">
+                <div>
+                    <input id="file-input" type="file" name="file" accept=".jpg, .png, .jpeg">
+                    <br>
+                    <label for="file-input">Выберите файл</label>
+                    <span>или перетащите его сюда</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/PersonalAreaScript.js"></script>
+</body>
+</html>
