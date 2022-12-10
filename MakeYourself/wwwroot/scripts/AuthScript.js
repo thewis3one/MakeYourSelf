@@ -21,8 +21,8 @@ button.addEventListener("click", function () {
         body: JSON.stringify(client)
     })
         .then((response) => response.json())
-        .catch(() => passwrd.insertAdjacentElement("afterend", label)
-        .then((data) => console.log(data)),
+        .then((data) => console.log(data))
+        .catch(() => passwrd.insertAdjacentElement("afterend", label),
 
         setTimeout(() => {
             let removedElement = document.getElementsByClassName("message");
