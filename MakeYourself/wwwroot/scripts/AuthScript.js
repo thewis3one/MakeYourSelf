@@ -1,13 +1,21 @@
 ﻿let button = document.getElementById("Button_submit");
-console.log(button)
 
-let label = document.createElement('label');
-label.className = 'message';
+let label = document.createElement("label");
+label.className = "message";
 label.innerHTML = "Неверный логин или пароль";
 
 let passwrd = document.getElementsByName('password')[0];
 
 button.addEventListener("click", function () {
+    
+    if (document.querySelector(".message") !== null)
+    {
+        setTimeout(() => {
+            const willBeRemoved = document.querySelector(".message");
+            willBeRemoved.parentElement.removeChild(willBeRemoved);
+        }, 2);
+        }
+
     let client = {
         login: document.getElementsByName('login')[0].value,
         password: document.getElementsByName('password')[0].value
@@ -22,12 +30,6 @@ button.addEventListener("click", function () {
     })
         .then((response) => response.json())
         .then((data) => console.log(data))
-        .catch(() => passwrd.insertAdjacentElement("afterend", label),
-
-        setTimeout(() => {
-            let removedElement = document.getElementsByClassName("message");
-            removedElement.parentNode.removeChild(removedElement);
-        }, 2))
-
+        .catch(() => passwrd.insertAdjacentElement("afterend", label))
 },
     false);

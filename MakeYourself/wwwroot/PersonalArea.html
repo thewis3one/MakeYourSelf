@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="styles/PersonalAreaStyle.css">
 </head>
 <body>
+
+    <nav>
+        <button></button>
+    </nav>
+
     <div class="wrapper">
         <div class="content">
-            <form id="upload-container" method="POST" action="send.php">
-                <div>
-                    <input id="file-input" type="file" name="file" accept=".jpg, .png, .jpeg">
-                    <br>
-                    <label for="file-input">Выберите файл</label>
-                    <span>или перетащите его сюда</span>
+                <div class="img-container">
+                    <img src="img/Avatar.png" class="Avatar" alt="" width="200" height="200">
+                    <div class="clientInformation">
+                    <h2>Ковальчук Дмитрий Игоревич</h2>
+                    <label>Дата рождения:</label>
+                    <label>Вес:</label>
+                    <label >Рост:</label>
+                    <label>Тип телосложения:</label>
+                    </div>
                 </div>
-            </form>
         </div>
     </div>
     <script src="scripts/PersonalAreaScript.js"></script>
