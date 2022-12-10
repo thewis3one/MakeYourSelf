@@ -21,8 +21,13 @@ button.addEventListener("click", function () {
         body: JSON.stringify(client)
     })
         .then((response) => response.json())
-        .then((data) => console.log(data))
-        .catch(() => passwrd.insertAdjacentElement("afterend", label))
+        .catch(() => passwrd.insertAdjacentElement("afterend", label)
+        .then((data) => console.log(data)),
+
+        setTimeout(() => {
+            let removedElement = document.getElementsByClassName("message");
+            removedElement.parentNode.removeChild(removedElement);
+        }, 2))
 
 },
     false);
