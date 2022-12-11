@@ -16,3 +16,13 @@
 //     fetch('', )
 // },false);
 
+let button = document.getElementsByClassName('menu-btn')[0];
+console.log(button)
+button.addEventListener('click', function (e) {
+    e.preventDefault();
+    let menu = document.getElementsByClassName('menu')[0];
+    menu.classList.toggle('menu-active');
+    let content_action = document.getElementsByClassName('content')[0];
+
+    content_action.classList.toggle('content-active');
+}, false)
