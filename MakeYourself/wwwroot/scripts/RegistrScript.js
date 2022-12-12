@@ -1,7 +1,20 @@
 let button = document.getElementById("Button_submit");
-console.log(button)
+
+let label = document.createElement("label");
+label.className = "message";
+label.innerHTML = "Данный логин уже занят";
+
+let select = document.getElementsByName("buildTypeId")[0];
 
 button.addEventListener("click", function () {
+
+    if (document.querySelector(".message") !== null) {
+        setTimeout(() => {
+            const willBeRemoved = document.querySelector(".message");
+            willBeRemoved.parentElement.removeChild(willBeRemoved);
+        }, 2);
+    }
+
     let client = {
         fio: document.getElementsByName('fio')[0].value,
         dateOfBirth: document.getElementsByName('dateOfBirth')[0].value,
@@ -20,6 +33,7 @@ button.addEventListener("click", function () {
         body: JSON.stringify(client)
     })
         .then((response) => response.json())
-        .then((data) => console.log(data));
+        .then((data) => console.log(data))
+        .catch(() => select.insertAdjacentElement("afterend", label))
 
 }, false);
